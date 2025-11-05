@@ -70,7 +70,7 @@ const Navbar = () => {
           </div>
         </ul>
 
-        <div className="font-bold flex items-center gap-4">
+        <div className="font-bold flex items-center gap-2">
           <a
             href="#"
             className="border rounded-full border-solid border-[#6c33d8] text-[#6c33d8] active:border-purple-600 px-4 py-1.5 bg-white hover:bg-[#eceff4] transition-colors duration-100 ease-in inline-flex items-center justify-center"

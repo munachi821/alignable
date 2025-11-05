@@ -12,3 +12,10 @@
     rgb(45, 0, 143) 100%
   );
 }
+.service-gradient {
+  background: linear-gradient(
+    57.259deg,
+    rgb(241, 247, 251) 0%,
+    rgb(234, 227, 249) 100%
+  );
+}
