@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 const Navbar = () => {
   return (
     <header>
-      <nav className="bg-white fixed w-full flex px-15 py-4 items-center justify-between shadow-md shadow-[#ebe2e2] border-b-2 border-b-[#d9dadd]">
+      <nav className="bg-white fixed w-full flex px-15 py-4 items-center justify-between shadow-md shadow-[#ebe2e2] border-b-2 border-b-[#d9dadd] z-50">
         <Link href="/">
           <Image src={logo} alt="logo" width={136} />
         </Link>

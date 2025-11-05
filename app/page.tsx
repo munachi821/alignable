@@ -2,6 +2,7 @@ import CTASection from "@/components/CTASection";
 import DiscoverSection from "@/components/DiscoverSection";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
+import TestimonialSection from "@/components/TestimonialSection";
 
 const page = () => {
   return (
@@ -10,6 +11,7 @@ const page = () => {
       <DiscoverSection />
       <ServicesSection />
       <CTASection />
+      <TestimonialSection />
     </div>
   );
 };
