@@ -5,3 +5,10 @@
   background-position: center;
   background-size: cover;
 }
+.bg-gradient {
+  background: linear-gradient(
+    to right,
+    rgb(108, 51, 216) 0%,
+    rgb(45, 0, 143) 100%
+  );
+}
