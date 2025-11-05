@@ -19,3 +19,10 @@
     rgb(234, 227, 249) 100%
   );
 }
+.cta-gradient {
+  background: linear-gradient(
+    109.538deg,
+    rgb(249, 240, 255) 0%,
+    rgb(176, 226, 202) 100%
+  );
+}
