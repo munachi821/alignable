@@ -25,8 +25,6 @@ const DiscoverSection = () => {
       percentageText: "relationships formed",
     },
   ];
-
-  const comapanyImage = [company1, company2, company3, company4, company5];
   return (
     <div>
       <section className="max-w-full bg-gradient pl-30 pr-10 py-20 border-b border-solid border-white">
