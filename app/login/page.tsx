@@ -59,9 +59,8 @@ const page = () => {
             </div>
             <form action="#" className="space-y-2">
               <input
-                type="email"
-                name="email"
-                id="email"
+                type="password"
+                name="password"
                 placeholder="Enter password"
                 className="w-full h-11 border border-[#d3d3d3] rounded-sm pl-2 outline-0 bg-[#f3f5f8]"
               />
