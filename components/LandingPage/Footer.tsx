@@ -1,6 +1,6 @@
 import { Facebook, Twitter } from "lucide-react";
-import Logo1SVG from "./Logo1SVG";
-import Logo2SVG from "./Logo2SVG";
+import Logo1SVG from "../SVG/Logo1SVG";
+import Logo2SVG from "../SVG/Logo2SVG";
 
 const Footer = () => {
   return (
