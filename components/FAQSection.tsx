@@ -9,7 +9,7 @@ const FAQSection = () => {
   const [faqOpen4, setFaqOpen4] = useState(false);
   return (
     <section className="px-20 py-10">
-      <h2 className="text-3xl font-bold mb-20">Frequently Asked Questions</h2>
+      <h2 className="text-3xl font-bold mb-10">Frequently Asked Questions</h2>
 
       <div>
         <div className="text-[#616b79]">
