@@ -8,7 +8,7 @@ const FAQSection = () => {
   const [faqOpen3, setFaqOpen3] = useState(false);
   const [faqOpen4, setFaqOpen4] = useState(false);
   return (
-    <section className="px-20 py-10">
+    <section className="px-20 py-20">
       <h2 className="text-3xl font-bold mb-10">Frequently Asked Questions</h2>
 
       <div>
