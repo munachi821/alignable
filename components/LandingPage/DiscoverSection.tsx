@@ -1,10 +1,10 @@
 import Image from "next/image";
-import globe from "../public/images/world-smallpng.png";
-import company1 from "../public/images/company1.png";
-import company2 from "../public/images/company2.png";
-import company3 from "../public/images/company3.png";
-import company4 from "../public/images/company4.png";
-import company5 from "../public/images/company5.png";
+import globe from "../../public/images/world-smallpng.png";
+import company1 from "../../public/images/company1.png";
+import company2 from "../../public/images/company2.png";
+import company3 from "../../public/images/company3.png";
+import company4 from "../../public/images/company4.png";
+import company5 from "../../public/images/company5.png";
 
 const DiscoverSection = () => {
   const discover = [

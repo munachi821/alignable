@@ -1,11 +1,11 @@
 import Image from "next/image";
-import services1 from "../public/images/services1.png";
-import services2 from "../public/images/services2.jpg";
-import services3 from "../public/images/services3.jpg";
-import services4 from "../public/images/services4.jpg";
-import services5 from "../public/images/services5.png";
-import services6 from "../public/images/services6.jpg";
-import services7 from "../public/images/services7.jpeg";
+import services1 from "../../public/images/services1.png";
+import services2 from "../../public/images/services2.jpg";
+import services3 from "../../public/images/services3.jpg";
+import services4 from "../../public/images/services4.jpg";
+import services5 from "../../public/images/services5.png";
+import services6 from "../../public/images/services6.jpg";
+import services7 from "../../public/images/services7.jpeg";
 
 const ServicesSection = () => {
   return (

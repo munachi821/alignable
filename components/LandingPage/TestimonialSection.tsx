@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import testimonial1 from "../public/images/testimonial1.jpeg";
-import testimonial2 from "../public/images/testimonial2.jpeg";
-import testimonial3 from "../public/images/testimonial3.png";
-import testimonial4 from "../public/images/testimonial4.png";
+import testimonial1 from "../../public/images/testimonial1.jpeg";
+import testimonial2 from "../../public/images/testimonial2.jpeg";
+import testimonial3 from "../../public/images/testimonial3.png";
+import testimonial4 from "../../public/images/testimonial4.png";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
