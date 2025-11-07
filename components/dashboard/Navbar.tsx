@@ -84,13 +84,15 @@ const Navbar = () => {
                   </span>
                   <p className="ml-1">help</p>
                 </div>
-                <div className="font-semibold flex items-center text-[#5023b0] hover:bg-[#f3f5f8] transition-colors pl-1 h-9 rounded-md mt-2">
-                  <p className="whitespace-nowrap truncate">
-                    All results for &quot;
-                    <span>{searchInput}</span>
-                    &quot;
-                  </p>
-                </div>
+                {searchInput && (
+                  <div className="font-semibold flex items-center text-[#5023b0] hover:bg-[#f3f5f8] transition-colors pl-1 h-9 rounded-md mt-2">
+                    <p className="whitespace-nowrap truncate">
+                      All results for &quot;
+                      <span>{searchInput}</span>
+                      &quot;
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -139,63 +141,66 @@ const Navbar = () => {
               </div>
 
               <div
-                className={`fixed min-w-screen min-h-screen top-12 left-0 ${
+                className={`fixed min-w-screen min-h-screen top-17 left-0 ${
                   openProfile ? "block" : "hidden"
                 }`}
                 onClick={() => setOpenProfile(!openProfile)}
+              ></div>
+              <div
+                className={`absolute min-w-[318px] bg-white text-black p-3 rounded-xl border border-[#e2e8f0] right-0 top-18.5 ${
+                  openProfile ? "block" : "hidden"
+                }`}
               >
-                <div className="absolute min-w-[318px] bg-white text-black p-3 rounded-xl shadow-md right-50 top-7">
-                  <div className="border-b border-[#f3f5f8]">
-                    <div className="flex p-3 items-center gap-3 hover:bg-[#f3f5f8] transition-colors rounded-lg mb-1">
-                      <span className="size-11 rounded-full flex items-center justify-center bg-[#fff2db] text-[#f3b72d] text-2xl font-medium">
-                        CM
+                <div className="border-b border-[#f3f5f8]">
+                  <div className="flex p-3 items-center gap-3 hover:bg-[#f3f5f8] transition-colors rounded-lg mb-1">
+                    <span className="size-11 rounded-full flex items-center justify-center bg-[#fff2db] text-[#f3b72d] text-2xl font-medium">
+                      CM
+                    </span>
+                    <ul className="leading-5">
+                      <li className="font-bold text-[#1f2937]">
+                        Munachi Onyebuchi
+                      </li>
+                      <li className="font-semibold text-[#8b95a3]">Hepdex</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="border-b border-[#f3f5f8]">
+                  <div className="mt-1 flex items-center flex-col text-[#1f2937] mb-1">
+                    <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full">
+                      <ProfileSVG />
+                      <p className="font-semibold">Profile</p>
+                    </div>
+                    <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full justify-between">
+                      <div className="flex">
+                        <VerifiedSVG />
+                        <p className="font-semibold">Become Premium</p>
+                      </div>
+                      <span className="text-[#7f5026] bg-[#fbedd6] font-bold text-[12px] p-0.5 px-1.5 rounded-md">
+                        UPGRADE
                       </span>
-                      <ul className="leading-5">
-                        <li className="font-bold text-[#1f2937]">
-                          Munachi Onyebuchi
-                        </li>
-                        <li className="font-semibold text-[#8b95a3]">Hepdex</li>
-                      </ul>
+                    </div>
+                    <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full">
+                      <AdvertiseSVG />
+                      <p className="font-semibold">Advertise</p>
+                    </div>
+                    <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full">
+                      <SupportSVG />
+                      <p className="font-semibold">Get Support</p>
+                    </div>
+                    <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full">
+                      <InsightsSVG />
+                      <p className="font-semibold">Insights</p>
+                    </div>
+                    <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full">
+                      <AccountSVG />
+                      <p className="font-semibold">Account</p>
                     </div>
                   </div>
+                </div>
 
-                  <div className="border-b border-[#f3f5f8]">
-                    <div className="mt-1 flex items-center flex-col text-[#1f2937] mb-1">
-                      <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full">
-                        <ProfileSVG />
-                        <p className="font-semibold">Profile</p>
-                      </div>
-                      <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full justify-between">
-                        <div className="flex">
-                          <VerifiedSVG />
-                          <p className="font-semibold">Become Premium</p>
-                        </div>
-                        <span className="text-[#7f5026] bg-[#fbedd6] font-bold text-[12px] p-0.5 px-1.5 rounded-md">
-                          UPGRADE
-                        </span>
-                      </div>
-                      <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full">
-                        <AdvertiseSVG />
-                        <p className="font-semibold">Advertise</p>
-                      </div>
-                      <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full">
-                        <SupportSVG />
-                        <p className="font-semibold">Get Support</p>
-                      </div>
-                      <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full">
-                        <InsightsSVG />
-                        <p className="font-semibold">Insights</p>
-                      </div>
-                      <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full">
-                        <AccountSVG />
-                        <p className="font-semibold">Account</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="px-3 h-10 mt-1 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full text-[#1f2937]">
-                    <p className="font-semibold">Sign Out</p>
-                  </div>
+                <div className="px-3 h-10 mt-1 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full text-[#1f2937]">
+                  <p className="font-semibold">Sign Out</p>
                 </div>
               </div>
             </div>
