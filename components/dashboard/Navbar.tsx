@@ -103,9 +103,14 @@ const Navbar = () => {
                         <ProfileSVG />
                         <p className="font-semibold">Profile</p>
                       </div>
-                      <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full">
-                        <VerifiedSVG />
-                        <p className="font-semibold">Become Premium</p>
+                      <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full justify-between">
+                        <div className="flex">
+                          <VerifiedSVG />
+                          <p className="font-semibold">Become Premium</p>
+                        </div>
+                        <span className="text-[#7f5026] bg-[#fbedd6] font-bold leading-relaxed text-[12px] p-0.5 px-1.5 rounded-md">
+                          UPGRADE
+                        </span>
                       </div>
                       <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full">
                         <AdvertiseSVG />
