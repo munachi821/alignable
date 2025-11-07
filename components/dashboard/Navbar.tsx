@@ -75,14 +75,12 @@ const Navbar = () => {
               </div>
 
               <div
-                className="fixed min-w-screen min-h-screen top-12 left-0"
+                className={`fixed min-w-screen min-h-screen top-12 left-0 ${
+                  openProfile ? "block" : "hidden"
+                }`}
                 onClick={() => setOpenProfile(!openProfile)}
               >
-                <div
-                  className={`absolute min-w-[318px] bg-white text-black p-3 rounded-xl shadow-md right-50 top-7 ${
-                    openProfile ? "block" : "hidden"
-                  }`}
-                >
+                <div className="absolute min-w-[318px] bg-white text-black p-3 rounded-xl shadow-md right-50 top-7">
                   <div className="border-b border-[#f3f5f8]">
                     <div className="flex p-3 items-center gap-3 hover:bg-[#f3f5f8] transition-colors rounded-lg mb-1">
                       <span className="size-11 rounded-full flex items-center justify-center bg-[#fff2db] text-[#f3b72d] text-2xl font-medium">
