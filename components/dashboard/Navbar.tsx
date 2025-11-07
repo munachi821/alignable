@@ -20,6 +20,7 @@ import ServicesSVG from "../SVG/ServicesSVG";
 import EventSVG from "../SVG/EventSVG";
 import HelpSVG from "../SVG/HelpSVG";
 import GroupsSVG from "../SVG/GroupsSVG";
+import Link from "next/link";
 
 const Navbar = () => {
   const [openProfile, setOpenProfile] = useState(false);
@@ -95,10 +96,13 @@ const Navbar = () => {
           </div>
 
           <ul className="flex">
-            <div className="flex items-center justify-center flex-col px-5 h-16 dashboard-active gap-1 cursor-pointer">
+            <Link
+              href="/biz"
+              className="flex items-center justify-center flex-col px-5 h-16 dashboard-active gap-1 cursor-pointer"
+            >
               <HomeSVG />
               <li className="text-xs font-semibold">Home</li>
-            </div>
+            </Link>
             <div className="flex items-center justify-center flex-col px-5 h-16 gap-1 cursor-pointer">
               <NetworkSVG />
               <li className="text-xs font-semibold">My Network</li>
