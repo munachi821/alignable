@@ -6,7 +6,7 @@ const Logo1SVG = () => {
       role="img"
       height="1em"
       fill="#fff"
-      className="h-8 text-white-100"
+      className="h-8 text-white"
     >
       <path
         fillRule="evenodd"

@@ -6,7 +6,7 @@ const Logo2SVG = () => {
       viewBox="0 0 107 30"
       role="img"
       height="1em"
-      className="ml-1.5 h-11 text-white-100"
+      className="ml-1.5 h-11 text-white"
     >
       <path
         fill="#fff"

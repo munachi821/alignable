@@ -26,3 +26,14 @@
     rgb(176, 226, 202) 100%
   );
 }
+.dashboard-active {
+  position: relative;
+}
+.dashboard-active::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+  background-color: white;
+}
