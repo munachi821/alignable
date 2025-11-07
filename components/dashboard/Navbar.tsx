@@ -44,7 +44,7 @@ const Navbar = () => {
             />
             <SearchSVG />
 
-            <div className="absolute top-12 left-11.5 w-[318px] bg-white text-black p-3 rounded-xl shadow-md hidden group-focus-within:block overflow-x-hidden">
+            <div className="absolute top-12 left-11.5 w-[318px] bg-white text-black p-3 rounded-xl border border-[#e2e8f0] hidden group-focus-within:block overflow-x-hidden">
               <p className="text-[#8b95a3] font-semibold text-sm">
                 SEARCH FOR...
               </p>
