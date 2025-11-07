@@ -5,7 +5,7 @@ import Navbar from "@/components/dashboard/Navbar";
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html>
-      <body>
+      <body className="bg-[#f3f5f8]">
         <Navbar />
         {children}
       </body>

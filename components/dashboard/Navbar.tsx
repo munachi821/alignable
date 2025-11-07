@@ -1,3 +1,4 @@
+"use client";
 import { ChevronDown } from "lucide-react";
 import AllignableSVG from "../SVG/AllignableSVG";
 import EventsSVG from "../SVG/EventsSVG";
@@ -7,8 +8,16 @@ import MessagesSVG from "../SVG/MessagesSVG";
 import NetworkSVG from "../SVG/NetworkSVG";
 import NotificationSVG from "../SVG/NotificationSVG";
 import SearchSVG from "../SVG/SearchSVG";
+import ProfileSVG from "../SVG/ProfileSVG";
+import VerifiedSVG from "../SVG/VerifiedSVG";
+import AdvertiseSVG from "../SVG/AdvertiseSVG";
+import SupportSVG from "../SVG/SupportSVG";
+import InsightsSVG from "../SVG/InsightsSVG";
+import AccountSVG from "../SVG/AccountSVG";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [openProfile, setOpenProfile] = useState(false);
   return (
     <header>
       <nav className="w-full bg-[#391590] ">
@@ -51,14 +60,77 @@ const Navbar = () => {
               <li className="text-xs font-semibold">Notifications</li>
             </div>
 
-            <div className="flex items-center justify-center flex-col px-1 h-16 gap-1">
-              <span className="size-6 rounded-full flex items-center justify-center bg-[#fff2db] text-[#f3b72d] text-xs font-semibold">
-                CM
-              </span>
-              <li className="inline-flex items-center text-xs font-semibold gap-1.5">
-                My Business{" "}
-                <ChevronDown fill="#fff" size={13.5} strokeWidth={2} />
-              </li>
+            <div className="relative">
+              <div
+                className="flex items-center justify-center flex-col px-1 h-16 gap-1 cursor-pointer"
+                onClick={() => setOpenProfile(!openProfile)}
+              >
+                <span className="size-6 rounded-full flex items-center justify-center bg-[#fff2db] text-[#f3b72d] text-xs font-semibold">
+                  CM
+                </span>
+                <li className="inline-flex items-center text-xs font-semibold gap-1.5">
+                  My Business{" "}
+                  <ChevronDown fill="#fff" size={13.5} strokeWidth={2} />
+                </li>
+              </div>
+
+              <div
+                className="fixed min-w-screen min-h-screen top-12 left-0"
+                onClick={() => setOpenProfile(!openProfile)}
+              >
+                <div
+                  className={`absolute min-w-[318px] bg-white text-black p-3 rounded-xl shadow-md right-50 top-7 ${
+                    openProfile ? "block" : "hidden"
+                  }`}
+                >
+                  <div className="border-b border-[#f3f5f8]">
+                    <div className="flex p-3 items-center gap-3 hover:bg-[#f3f5f8] transition-colors rounded-lg mb-1">
+                      <span className="size-11 rounded-full flex items-center justify-center bg-[#fff2db] text-[#f3b72d] text-2xl font-medium">
+                        CM
+                      </span>
+                      <ul className="leading-5">
+                        <li className="font-bold text-[#1f2937]">
+                          Munachi Onyebuchi
+                        </li>
+                        <li className="font-semibold text-[#8b95a3]">Hepdex</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="border-b border-[#f3f5f8]">
+                    <div className="mt-1 flex items-center flex-col text-[#1f2937] mb-1">
+                      <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full">
+                        <ProfileSVG />
+                        <p className="font-semibold">Profile</p>
+                      </div>
+                      <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full">
+                        <VerifiedSVG />
+                        <p className="font-semibold">Become Premium</p>
+                      </div>
+                      <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full">
+                        <AdvertiseSVG />
+                        <p className="font-semibold">Advertise</p>
+                      </div>
+                      <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full">
+                        <SupportSVG />
+                        <p className="font-semibold">Get Support</p>
+                      </div>
+                      <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full">
+                        <InsightsSVG />
+                        <p className="font-semibold">Insights</p>
+                      </div>
+                      <div className="px-3 h-10 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full">
+                        <AccountSVG />
+                        <p className="font-semibold">Account</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="px-3 h-10 mt-1 flex items-center rounded-lg hover:bg-[#f3f5f8] transition-colors cursor-pointer w-full text-[#1f2937]">
+                    <p className="font-semibold">Sign Out</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="flex items-center justify-center flex-col mx-1 h-16 px-2">
