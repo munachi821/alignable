@@ -1,12 +1,13 @@
-"use client";
 import Image from "next/image";
 import rocketImg from "../../../public/images/rocket_jumpstart_logo.png";
 import ViewsSVG from "@/components/SVG/ViewsSVG";
 import ClickSVG from "@/components/SVG/ClickSVG";
 import InfoSVG from "@/components/SVG/InfoSVG";
-import { useState } from "react";
+import RocketSVG from "@/components/SVG/RocketSVG";
+import LocationSVG from "@/components/SVG/LocationSVG";
+import SupportsSVG from "@/components/SVG/SupportsSVG";
+import InviteSVG from "@/components/SVG/InviteSVG";
 const Page = () => {
-  const [showInfo, setShowInfo] = useState(false);
   return (
     <section className="w-screen min-h-screen py-8">
       <div className="max-w-[1150px] mx-auto bg-[#2d3748] px-4 py-4 rounded-xl flex justify-between items-center">
@@ -80,6 +81,48 @@ const Page = () => {
               </div>
             </div>
           </div>
+
+          <ul className="my-5.5 border-b pb-5.5 border-[#d3d3d3]">
+            <li className="font-semibold text-lg mb-3">QuickStart</li>
+
+            <div className="space-y-3">
+              <div className="flex items-start gap-4">
+                <RocketSVG />
+                <li className="font-semibold group cursor-pointer">
+                  <p className="group-hover:underline leading-3">Jumpstart</p>
+                  <span className="text-[#616b79] group-hover:underline text-sm">
+                    20 min, 3x a day, 7 days a week
+                  </span>
+                </li>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <LocationSVG />
+                <li className="font-semibold group cursor-pointer">
+                  <p className="group-hover:underline leading-3">Enugu EG</p>
+                  <span className="text-[#616b79] group-hover:underline text-sm">
+                    Your Community
+                  </span>
+                </li>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <SupportsSVG />
+                <li className="font-semibold group cursor-pointer">
+                  <p className="group-hover:underline leading-3">Get Support</p>
+                </li>
+              </div>
+
+              <div className="flex items-start gap-4 mt-4.5">
+                <InviteSVG />
+                <li className="font-semibold group cursor-pointer">
+                  <p className="group-hover:underline leading-3">
+                    Invite Business Owners
+                  </p>
+                </li>
+              </div>
+            </div>
+          </ul>
         </div>
 
         <div className="max-w-[805px] w-full bg-white rounded-md shadow-md"></div>
