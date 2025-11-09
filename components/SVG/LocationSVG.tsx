@@ -1,4 +1,7 @@
-const LocationSVG = () => {
+type ColorProps = {
+  color: string;
+};
+const LocationSVG = ({ color }: ColorProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -7,7 +10,8 @@ const LocationSVG = () => {
       role="img"
       aria-hidden="true"
       viewBox="0 0 12 16"
-      fill="#55575a"
+      fill={color}
+      className="shrink-0"
     >
       <title id="aq4c5jrr3o5g9rygouqx6qmfxno33tps"></title>
       <path

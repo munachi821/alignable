@@ -37,3 +37,6 @@
   bottom: 0;
   background-color: white;
 }
+.letter {
+  letter-spacing: 2px;
+}

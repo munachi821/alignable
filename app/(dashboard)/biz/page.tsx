@@ -7,6 +7,8 @@ import RocketSVG from "@/components/SVG/RocketSVG";
 import LocationSVG from "@/components/SVG/LocationSVG";
 import SupportsSVG from "@/components/SVG/SupportsSVG";
 import InviteSVG from "@/components/SVG/InviteSVG";
+import businessShop from "../../../public/images/square_default_business.png";
+import BrowseSVG from "@/components/SVG/BrowseSVG";
 const Page = () => {
   return (
     <section className="w-screen min-h-screen py-8">
@@ -82,10 +84,10 @@ const Page = () => {
             </div>
           </div>
 
-          <ul className="my-5.5 border-b pb-5.5 border-[#d3d3d3]">
-            <li className="font-semibold text-lg mb-3">QuickStart</li>
+          <div className="my-5.5 border-b pb-5.5 border-[#d3d3d3]">
+            <p className="font-semibold text-lg mb-3">Quick Links</p>
 
-            <div className="space-y-3">
+            <ul className="space-y-3 pl-3">
               <div className="flex items-start gap-4">
                 <RocketSVG />
                 <li className="font-semibold group cursor-pointer">
@@ -97,7 +99,7 @@ const Page = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <LocationSVG />
+                <LocationSVG color="#55575a" />
                 <li className="font-semibold group cursor-pointer">
                   <p className="group-hover:underline leading-3">Enugu EG</p>
                   <span className="text-[#616b79] group-hover:underline text-sm">
@@ -121,8 +123,55 @@ const Page = () => {
                   </p>
                 </li>
               </div>
+            </ul>
+          </div>
+
+          <div className="border-b pb-5.5 border-[#d3d3d3]">
+            <div className="bg-white p-3 border border-[#d3d3d3] rounded-lg space-y-2">
+              <div className="w-fit mx-auto border border-[#f2f2f2] p-2 relative mb-4">
+                <Image src={businessShop} alt="shop image" width={112} />
+                <p className="bg-[#fbedd6] text-[#7f5026] text-xs p-1 px-1.5 w-fit text-center font-extrabold rounded-sm letter absolute left-5.5 top-28">
+                  PREMIUM
+                </p>
+              </div>
+              <div className="text-center">
+                <p className="text-sm font-bold">
+                  Boost your refferals in Enugu
+                </p>
+                <p className="text-xs font-semibold">
+                  Access more business owners with Premium
+                </p>
+              </div>
+              <button className="w-full border-[#6c33d8] border text-xs py-2.5 rounded-sm text-[#6c33d8] font-bold cursor-pointer hover:opacity-70 transition-opacity">
+                See How
+              </button>
             </div>
-          </ul>
+          </div>
+
+          <div className="my-5.5">
+            <p className="font-semibold text-lg mb-3">My Groups</p>
+            <ul className="space-y-3 pl-3">
+              <div className="flex items-center gap-4.5">
+                <LocationSVG color="#6c33d8" />
+                <div className="flex items-center justify-between w-full">
+                  <li className="font-semibold hover:underline cursor-pointer">
+                    Enugu, EN
+                  </li>
+
+                  <div className="rounded-full size-3 bg-[#c2292c] flex items-center justify-center">
+                    <span className="w-0.5 h-0.5 bg-white"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4.5">
+                <BrowseSVG />
+                <li className="font-semibold hover:underline cursor-pointer">
+                  Browse Groups
+                </li>
+              </div>
+            </ul>
+          </div>
         </div>
 
         <div className="max-w-[805px] w-full bg-white rounded-md shadow-md"></div>
