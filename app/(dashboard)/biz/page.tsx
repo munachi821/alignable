@@ -15,9 +15,14 @@ import GetStartedSVG from "@/components/SVG/GetStartedSVG";
 import { Check, ChevronRight } from "lucide-react";
 import PromotionSVG from "@/components/SVG/PromotionSVG";
 import ProductSVG from "@/components/SVG/ProductSVG";
+import ProfileImg from "../../../public/images/ProfileImg1.png";
+import Premium_tagSVG from "@/components/SVG/Premium_tagSVG";
+import EventImg from "../../../public/images/EventImg.png";
+import LikeSVG from "@/components/SVG/LikeSVG";
+import ShareSVG from "@/components/SVG/ShareSVG";
 const Page = () => {
   return (
-    <section className="w-screen min-h-screen py-8">
+    <section className="w-screen min-h-screen py-24">
       <div className="max-w-[1150px] mx-auto bg-[#2d3748] px-4 py-4 rounded-xl flex justify-between items-center">
         <div className="flex gap-4">
           <div>
@@ -365,6 +370,134 @@ const Page = () => {
               </button>
               <button className="flex-1 flex items-center justify-center py-1 cursor-pointer gap-2 text-sm hover:underline">
                 <ProductSVG /> Product or Service
+              </button>
+            </div>
+          </div>
+
+          {/* Posts */}
+
+          {/* Register for Group Event */}
+          <div className="bg-white border border-[#e7e8ea] rounded-xl p-3">
+            <header className="flex items-center gap-2 pt-1.5 mb-3">
+              <a
+                href="#"
+                className="size-10 rounded-full bg-red-300 flex items-center justify-center overflow-hidden"
+              >
+                <Image
+                  src={ProfileImg}
+                  alt="profile picture"
+                  className="w-10 h-10 object-cover"
+                />
+              </a>
+
+              <div className="flex items-start h-fit gap-2">
+                <Premium_tagSVG />
+                <div>
+                  <p className="h-fit -mt-1.5">
+                    <a
+                      href="#"
+                      className="font-bold text-[#1f2937] hover:underline"
+                    >
+                      Cynthia Abott
+                    </a>{" "}
+                    in{" "}
+                    <a
+                      href="#"
+                      className="font-bold text-[#1f2937] hover:underline"
+                    >
+                      Allignable Alliance of Lower Manhattan NY
+                    </a>
+                  </p>
+                  <a
+                    href="#"
+                    className="font-semibold text-[#8b95a3] hover:underline"
+                  >
+                    5d
+                  </a>
+                </div>
+              </div>
+            </header>
+
+            <div className="border border-[#e7e8ea] rounded-lg p-4">
+              <div className="flex items-center">
+                <div className="w-3/4 flex gap-3">
+                  <a href="#" className="w-[180px]">
+                    <Image
+                      src={EventImg}
+                      alt="event"
+                      className="object-cover w-[180px] rounded-lg"
+                    />
+                  </a>
+
+                  <div>
+                    <a href="#" className="space-y-1">
+                      <p className="text-[#1f2937] font-bold">
+                        Wed, Nov 12 at 5:30 PM EST
+                      </p>
+                      <p className="font-semibold text-[1.125rem] leading-tight">
+                        Smart Connect for Obsessed Business Leaders
+                      </p>
+                    </a>
+                    <a href="#" className="font-bold text-[#6c33d8] mt-6">
+                      62 Registered
+                    </a>
+                  </div>
+                </div>
+                <button className="w-1/4 bg-[#6c33d8] rounded-md font-bold text-white py-2.5 hover:bg-[#9d74e5] transition-colors cursor-pointer">
+                  Register
+                </button>
+              </div>
+
+              <div className="[&_p]:mb-2 line-clamp-6 mb-2 font-semibold text-[#1f2937] mt-4.5">
+                <p>
+                  🌐 Planning to Connect&nbsp;&nbsp; Weekly Smart Networking
+                  Event
+                </p>
+                <p>
+                  Join a powerful community of entrepreneurs and leaders who
+                  believe in connection before commission.
+                </p>
+                <p>
+                  Where business builders meet virtually to share ideas,
+                  referrals, and real opportunities to grow together.
+                </p>
+                <p>
+                  💬 Come ready to introduce your business, connect with
+                  purpose, and build genuine relationships. No selling
+                  <br />
+                  📅 Every [Wednesday, at 5:30 PM ET]&nbsp; 💻 Virtual via Zoom
+                </p>
+                <p>Let’s plan to connect and watch our businesses multiply!</p>
+                <p className="text-[#055a8c] hover:underline last:mb-0">
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                  >
+                    (3) MVP Cynthia Abbott - YouTube
+                  </a>
+                </p>
+              </div>
+              <a
+                href="#"
+                className="font-bold text-[#1f2937] hover:underline leading-0"
+              >
+                View Event
+              </a>
+            </div>
+
+            {/* Comment count */}
+            <div className="text-[#6c33d8] font-semibold text-sm space-x-5 my-2">
+              <a href="#">1 Comment</a>
+              <a href="#">4 Likes</a>
+            </div>
+
+            <div>
+              <button>
+                <LikeSVG /> Like
+              </button>
+              <button>
+                <ShareSVG /> Share
               </button>
             </div>
           </div>

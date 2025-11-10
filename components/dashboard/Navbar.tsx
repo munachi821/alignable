@@ -30,7 +30,7 @@ const Navbar = () => {
   };
   return (
     <header>
-      <nav className="w-full bg-[#391590] ">
+      <nav className="w-full bg-[#391590] fixed z-50">
         <div className="flex text-white py-0.5 items-center justify-between max-w-[1140px] mx-auto">
           <div className="flex h-fit gap-2 relative group">
             <AllignableSVG />
