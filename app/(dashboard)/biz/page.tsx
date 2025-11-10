@@ -249,6 +249,7 @@ const Page = () => {
                         name="create-account"
                         id="create-account"
                         className="peer sr-only"
+                        defaultChecked={true}
                       />
                       <span className="w-5 h-5 border-2 border-[#aeb8c7] peer-checked:border-[#6c33d8] bg-white rounded-full peer-checked:bg-[#6c33d8] flex items-center justify-center transition-all duration-150 mr-1">
                         <Check className="text-white peer-checked:text-blue-600" />
@@ -273,7 +274,7 @@ const Page = () => {
                       <span className="w-5 h-5 border-2 border-[#aeb8c7] peer-checked:border-[#6c33d8] bg-white rounded-full peer-checked:bg-[#6c33d8] flex items-center justify-center transition-all duration-150 mr-1">
                         <Check className="text-white peer-checked:text-blue-600" />
                       </span>
-                      <p className="peer-checked:line-through text-[#1f2937]">
+                      <p className="peer-checked:line-through text-[#1f2937] hover:underline cursor-pointer">
                         Who do you want to meet?
                       </p>
                     </div>
@@ -300,7 +301,7 @@ const Page = () => {
                       <span className="w-5 h-5 border-2 border-[#aeb8c7] peer-checked:border-[#6c33d8] bg-white rounded-full peer-checked:bg-[#6c33d8] flex items-center justify-center transition-all duration-150 mr-1">
                         <Check className="text-white peer-checked:text-blue-600" />
                       </span>
-                      <p className="peer-checked:line-through text-[#1f2937]">
+                      <p className="peer-checked:line-through text-[#1f2937] hover:underline cursor-pointer">
                         Connect with those you already know
                       </p>
                     </div>
@@ -327,7 +328,7 @@ const Page = () => {
                       <span className="w-5 h-5 border-2 border-[#aeb8c7] peer-checked:border-[#6c33d8] bg-white rounded-full peer-checked:bg-[#6c33d8] flex items-center justify-center transition-all duration-150 mr-1">
                         <Check className="text-white peer-checked:text-blue-600" />
                       </span>
-                      <p className="peer-checked:line-through text-[#1f2937]">
+                      <p className="peer-checked:line-through text-[#1f2937] hover:underline cursor-pointer">
                         See your refferal Opporturnities
                       </p>
                     </div>
