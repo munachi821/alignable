@@ -9,6 +9,8 @@ import SupportsSVG from "@/components/SVG/SupportsSVG";
 import InviteSVG from "@/components/SVG/InviteSVG";
 import businessShop from "../../../public/images/square_default_business.png";
 import BrowseSVG from "@/components/SVG/BrowseSVG";
+import ShiningSVG from "@/components/SVG/ShiningSVG";
+import NetworkerSVG from "@/components/SVG/NetworkerSVG";
 const Page = () => {
   return (
     <section className="w-screen min-h-screen py-8">
@@ -174,7 +176,52 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="max-w-[805px] w-full bg-white rounded-md shadow-md"></div>
+        <div className="max-w-[805px] w-full">
+          <div className="bg-white rounded-xl shadow-md shadow-[#e8eaed] p-5 border border-[#f3f5f8] border-solid">
+            <div className="flex gap-3">
+              <ShiningSVG />
+              <p className="font-bold text-[#8b95a3] text-sm">
+                Networking Coach
+              </p>
+            </div>
+            <p className="font-bold text-[#1f2937] text-xl mt-1">
+              Here&apos;s a great member to connect with
+            </p>
+
+            <div className="max-w-[500px] border-2 border-solid border-[#f3f5f8] mx-auto rounded-xl p-4 mt-6 mb-6">
+              <div className="flex items-center gap-3 border-b-2 border-[#f3f5f8] pb-4">
+                <div className="size-18 rounded-full border border-[#d2d5d7] bg-[#e7f9ff] text-[#3bbfe3] flex items-center justify-center">
+                  <span className="text-4xl">TC</span>
+                </div>
+                <ul>
+                  <li className="text-[#1f2937] font-semibold text-xl leading-6">
+                    Terrence Christgau
+                  </li>
+                  <li className="text-[#616b79] font-semibold">
+                    Charles Wilmot Writer
+                  </li>
+                </ul>
+              </div>
+
+              <div className="flex mt-5 gap-2 items-start">
+                <NetworkerSVG />
+                <p className="networking-gradient bg-clip-text text-transparent font-bold">
+                  Terrence is an active networker with 18 connections. Connect
+                  and build trust with them.
+                </p>
+              </div>
+
+              <div className="font-semibold space-x-3 mt-5.5">
+                <button className="py-2 px-4 shadow rounded-md cursor-pointer hover:bg-[#f3f5f8] transition-colors">
+                  Dismiss
+                </button>
+                <button className="py-2 px-3.5 border border-[#6c33d8] rounded-md bg-[#6c33d8] text-white cursor-pointer hover:bg-[#391590] transition-colors">
+                  Connect
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
