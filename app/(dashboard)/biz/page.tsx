@@ -13,6 +13,8 @@ import ShiningSVG from "@/components/SVG/ShiningSVG";
 import NetworkerSVG from "@/components/SVG/NetworkerSVG";
 import GetStartedSVG from "@/components/SVG/GetStartedSVG";
 import { Check, ChevronRight } from "lucide-react";
+import PromotionSVG from "@/components/SVG/PromotionSVG";
+import ProductSVG from "@/components/SVG/ProductSVG";
 const Page = () => {
   return (
     <section className="w-screen min-h-screen py-8">
@@ -342,6 +344,28 @@ const Page = () => {
                   </label>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className="border border-[#e7e8ea] bg-white p-2.5 rounded-xl my-3">
+            <div className="flex gap-3 p-1 border-b border-[#d3d3d3] pb-4">
+              <a
+                href="#"
+                className="size-10 rounded-full bg-[#ebdfca] text-[#e2a61a] border border-[#efeadf] flex items-center justify-center text-xl cursor-pointer shrink-0"
+              >
+                CM
+              </a>
+              <div className="border border-[#d3d3d3] p-2 w-full rounded-sm hover:underline cursor-pointer">
+                <a href="#">Post to Your Network</a>
+              </div>
+            </div>
+            <div className="font-semibold text-[#3c3f43] flex justify-between p-2">
+              <button className="flex-1 flex items-center justify-center py-1 cursor-pointer gap-2 text-sm border-r border-[#d3d3d3] hover:underline">
+                <PromotionSVG /> Promotion
+              </button>
+              <button className="flex-1 flex items-center justify-center py-1 cursor-pointer gap-2 text-sm hover:underline">
+                <ProductSVG /> Product or Service
+              </button>
             </div>
           </div>
         </div>
