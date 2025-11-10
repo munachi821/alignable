@@ -11,6 +11,8 @@ import businessShop from "../../../public/images/square_default_business.png";
 import BrowseSVG from "@/components/SVG/BrowseSVG";
 import ShiningSVG from "@/components/SVG/ShiningSVG";
 import NetworkerSVG from "@/components/SVG/NetworkerSVG";
+import GetStartedSVG from "@/components/SVG/GetStartedSVG";
+import { Check, ChevronRight } from "lucide-react";
 const Page = () => {
   return (
     <section className="w-screen min-h-screen py-8">
@@ -177,47 +179,167 @@ const Page = () => {
         </div>
 
         <div className="max-w-[805px] w-full">
-          <div className="bg-white rounded-xl shadow-md shadow-[#e8eaed] p-5 border border-[#f3f5f8] border-solid">
-            <div className="flex gap-3">
-              <ShiningSVG />
-              <p className="font-bold text-[#8b95a3] text-sm">
-                Networking Coach
-              </p>
-            </div>
-            <p className="font-bold text-[#1f2937] text-xl mt-1">
-              Here&apos;s a great member to connect with
-            </p>
-
-            <div className="max-w-[500px] border-2 border-solid border-[#f3f5f8] mx-auto rounded-xl p-4 mt-6 mb-6">
-              <div className="flex items-center gap-3 border-b-2 border-[#f3f5f8] pb-4">
-                <div className="size-18 rounded-full border border-[#d2d5d7] bg-[#e7f9ff] text-[#3bbfe3] flex items-center justify-center">
-                  <span className="text-4xl">TC</span>
-                </div>
-                <ul>
-                  <li className="text-[#1f2937] font-semibold text-xl leading-6">
-                    Terrence Christgau
-                  </li>
-                  <li className="text-[#616b79] font-semibold">
-                    Charles Wilmot Writer
-                  </li>
-                </ul>
-              </div>
-
-              <div className="flex mt-5 gap-2 items-start">
-                <NetworkerSVG />
-                <p className="networking-gradient bg-clip-text text-transparent font-bold">
-                  Terrence is an active networker with 18 connections. Connect
-                  and build trust with them.
+          <div className="flex flex-col gap-10">
+            <div className="bg-white rounded-xl shadow-md shadow-[#e8eaed] p-5 border border-[#f3f5f8] border-solid">
+              <div className="flex gap-3">
+                <ShiningSVG />
+                <p className="font-bold text-[#8b95a3] text-sm">
+                  Networking Coach
                 </p>
               </div>
+              <p className="font-bold text-[#1f2937] text-xl mt-1">
+                Here&apos;s a great member to connect with
+              </p>
 
-              <div className="font-semibold space-x-3 mt-5.5">
-                <button className="py-2 px-4 shadow rounded-md cursor-pointer hover:bg-[#f3f5f8] transition-colors">
-                  Dismiss
-                </button>
-                <button className="py-2 px-3.5 border border-[#6c33d8] rounded-md bg-[#6c33d8] text-white cursor-pointer hover:bg-[#391590] transition-colors">
-                  Connect
-                </button>
+              <div className="max-w-[500px] border-2 border-solid border-[#f3f5f8] mx-auto rounded-xl p-4 mt-6 mb-6">
+                <div className="flex items-center gap-3 border-b-2 border-[#f3f5f8] pb-4">
+                  <div className="size-18 rounded-full border border-[#d2d5d7] bg-[#e7f9ff] text-[#3bbfe3] flex items-center justify-center">
+                    <span className="text-4xl">TC</span>
+                  </div>
+                  <ul>
+                    <li className="text-[#1f2937] font-semibold text-xl leading-6">
+                      Terrence Christgau
+                    </li>
+                    <li className="text-[#616b79] font-semibold">
+                      Charles Wilmot Writer
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="flex mt-5 gap-2 items-start">
+                  <NetworkerSVG />
+                  <p className="networking-gradient bg-clip-text text-transparent font-bold">
+                    Terrence is an active networker with 18 connections. Connect
+                    and build trust with them.
+                  </p>
+                </div>
+
+                <div className="font-semibold space-x-3 mt-5.5">
+                  <button className="py-2 px-4 shadow rounded-md cursor-pointer hover:bg-[#f3f5f8] transition-colors">
+                    Dismiss
+                  </button>
+                  <button className="py-2 px-3.5 border border-[#6c33d8] rounded-md bg-[#6c33d8] text-white cursor-pointer hover:bg-[#391590] transition-colors">
+                    Connect
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-10 text-center flex gap-15 border border-[#e7e8ea]">
+              <div className="max-w-[320px] space-y-3.5">
+                <GetStartedSVG />
+                <p className="font-semibold text-xl text-[#3c3f43]">
+                  Get Started on Allignable
+                </p>
+
+                <div className="w-full bg-[#f9f0ff] h-2.5 rounded-full overflow-hidden">
+                  <div className="bg-[#6c33d8] w-1/4 h-full rounded-full"></div>
+                </div>
+              </div>
+
+              <div className="w-full">
+                <div>
+                  <label
+                    htmlFor="create-account"
+                    className="flex items-center text-base font-semibold gap-2 border-b border-b-[#e7e8ea] pb-4"
+                  >
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        name="create-account"
+                        id="create-account"
+                        className="peer sr-only"
+                      />
+                      <span className="w-5 h-5 border-2 border-[#aeb8c7] peer-checked:border-[#6c33d8] bg-white rounded-full peer-checked:bg-[#6c33d8] flex items-center justify-center transition-all duration-150 mr-1">
+                        <Check className="text-white peer-checked:text-blue-600" />
+                      </span>
+                      <p className="peer-checked:line-through text-[#1f2937]">
+                        Create your account
+                      </p>
+                    </div>
+                  </label>
+
+                  <label
+                    htmlFor="meet"
+                    className="flex items-center text-base font-semibold mt-4 border-b border-b-[#e7e8ea] pb-4 justify-between"
+                  >
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        name="meet"
+                        id="meet"
+                        className="peer sr-only"
+                      />
+                      <span className="w-5 h-5 border-2 border-[#aeb8c7] peer-checked:border-[#6c33d8] bg-white rounded-full peer-checked:bg-[#6c33d8] flex items-center justify-center transition-all duration-150 mr-1">
+                        <Check className="text-white peer-checked:text-blue-600" />
+                      </span>
+                      <p className="peer-checked:line-through text-[#1f2937]">
+                        Who do you want to meet?
+                      </p>
+                    </div>
+                    <div>
+                      <ChevronRight
+                        size={20}
+                        color="#374151"
+                        strokeWidth={2.5}
+                      />
+                    </div>
+                  </label>
+
+                  <label
+                    htmlFor="connect"
+                    className="flex items-center text-base font-semibold mt-4 border-b border-b-[#e7e8ea] pb-4 justify-between"
+                  >
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        name="connect"
+                        id="connect"
+                        className="peer sr-only"
+                      />
+                      <span className="w-5 h-5 border-2 border-[#aeb8c7] peer-checked:border-[#6c33d8] bg-white rounded-full peer-checked:bg-[#6c33d8] flex items-center justify-center transition-all duration-150 mr-1">
+                        <Check className="text-white peer-checked:text-blue-600" />
+                      </span>
+                      <p className="peer-checked:line-through text-[#1f2937]">
+                        Connect with those you already know
+                      </p>
+                    </div>
+                    <div>
+                      <ChevronRight
+                        size={20}
+                        color="#374151"
+                        strokeWidth={2.5}
+                      />
+                    </div>
+                  </label>
+
+                  <label
+                    htmlFor="refferal"
+                    className="flex items-center text-base font-semibold mt-4 justify-between"
+                  >
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        name="refferal"
+                        id="refferal"
+                        className="peer sr-only"
+                      />
+                      <span className="w-5 h-5 border-2 border-[#aeb8c7] peer-checked:border-[#6c33d8] bg-white rounded-full peer-checked:bg-[#6c33d8] flex items-center justify-center transition-all duration-150 mr-1">
+                        <Check className="text-white peer-checked:text-blue-600" />
+                      </span>
+                      <p className="peer-checked:line-through text-[#1f2937]">
+                        See your refferal Opporturnities
+                      </p>
+                    </div>
+                    <div>
+                      <ChevronRight
+                        size={20}
+                        color="#374151"
+                        strokeWidth={2.5}
+                      />
+                    </div>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
