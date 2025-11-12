@@ -1,12 +1,62 @@
+"use client";
 import Image from "next/image";
 import networkImg from "../../../../public/images/networkImg1.webp";
 import LocksSVG from "@/components/SVG/LocksSVG";
 import suggestedConnectionsImg1 from "../../../../public/images/suggestedConnectionsImg1.jpg";
-import { EllipsisVertical } from "lucide-react";
-import RectruiterSVG from "@/components/SVG/RectruiterSVG";
-import ConnectSVG from "@/components/SVG/ConnectSVG";
+import Connections from "@/components/dashboard/Connections";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const page = () => {
+  const connections = [
+    {
+      id: 1,
+      img: suggestedConnectionsImg1,
+      name: "Lisa Ann Wade",
+      company: "WadeOrbachLTD",
+      location: "Roselyn, NY",
+    },
+    {
+      id: 2,
+      img: suggestedConnectionsImg1,
+      name: "David Chen",
+      company: "TechSolutions Inc.",
+      location: "San Francisco, CA",
+    },
+    {
+      id: 3,
+      img: suggestedConnectionsImg1,
+      name: "Maria Garcia",
+      company: "Innovate Co.",
+      location: "Miami, FL",
+    },
+    {
+      id: 4,
+      img: suggestedConnectionsImg1,
+      name: "James Smith",
+      company: "Apex Logistics",
+      location: "Chicago, IL",
+    },
+    {
+      id: 5,
+      img: suggestedConnectionsImg1,
+      name: "Aisha Khan",
+      company: "Quantum Creatives",
+      location: "Austin, TX",
+    },
+    {
+      id: 6,
+      img: suggestedConnectionsImg1,
+      name: "Kenji Tanaka",
+      company: "Horizon Digital",
+      location: "Seattle, WA",
+    },
+  ];
+
   return (
     <section className="py-17">
       <div className="w-full bg-white border-b border-[#d8dde3] fixed">
@@ -78,49 +128,36 @@ const page = () => {
             </a>
           </div>
 
-          <div className="mt-2.5">
-            <div className="border border-[#c5ced9] bg-white max-w-[180px] h-64 rounded-lg relative p-2">
-              <div className="absolute right-0 pr-2 shrink-0">
-                <EllipsisVertical color="#8b95a3" />
-              </div>
-              <div className="w-[82px] h-[82px] rounded-full overflow-hidden mx-auto mt-1">
-                <Image
-                  src={suggestedConnectionsImg1}
-                  alt="suggestedConnectionsImg1"
-                />
-              </div>
-              <div className="mt-2.5 group">
-                <a
-                  href="#"
-                  className="font-bold text-sm text-center group-hover:underline"
-                >
-                  <p>Lisa Ann Wade</p>
-                  <p className="text-[#8b95a3] text-xs">WadeOrbachLTD</p>
-                </a>
-              </div>
-
-              <div className="flex items-center gap-1 border border-[#c5ced9] w-fit rounded-full font-bold text-xs p-0.5 px-2 mx-auto my-1">
-                <RectruiterSVG />
-                <span>Recruiter</span>
-              </div>
-
-              <a
-                href="#"
-                className="text-[#8b95a3] text-xs font-bold block text-center"
-              >
-                Rosylyn, Ny
-              </a>
-
-              <div>
-                <a
-                  href="#"
-                  className="border border-[#6c33d8] text-[#6c33d8] font-semibold flex items-center justify-center gap-2 rounded-md py-[3px] my-6.5 hover:bg-[#eceff4] hover:text-[#5023b0] transition-colors"
-                >
-                  <ConnectSVG />
-                  Connect
-                </a>
-              </div>
-            </div>
+          <div className="relative">
+            <Swiper
+              modules={[Navigation]}
+              spaceBetween={15}
+              slidesPerView={5}
+              navigation={{
+                nextEl: ".next-btn",
+                prevEl: ".prev-btn",
+              }}
+              pagination={{ clickable: true }}
+              scrollbar={{ draggable: true }}
+              className="mt-2.5"
+            >
+              {connections.map((connection) => (
+                <SwiperSlide key={connection.id}>
+                  <Connections
+                    id={connection.id}
+                    name={connection.name}
+                    img={connection.img}
+                    location={connection.location}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <button className="size-8 [&.swiper-button-disabled]:bg-transparent rounded-full border [&.swiper-button-disabled]:border-[#eceff4] [&.swiper-button-disabled]:text-[#8b95a3] prev-btn cursor-pointer flex items-center justify-center border-[#6c33d8] bg-[#6c33d8] hover:bg-[#391590] text-white transition-colors absolute -left-10 top-1/2 -translate-y-1/2 z-20">
+              <ArrowLeft size={17} />
+            </button>
+            <button className="size-8 border-[#6c33d8] bg-[#6c33d8] rounded-full hover:bg-[#391590] transition-colors flex items-center justify-center text-white cursor-pointer next-btn absolute -right-10 top-1/2 -translate-y-1/2 z-20">
+              <ArrowRight size={17} />
+            </button>
           </div>
         </div>
       </div>
