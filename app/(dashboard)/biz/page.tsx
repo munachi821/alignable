@@ -12,7 +12,7 @@ import BrowseSVG from "@/components/SVG/BrowseSVG";
 import ShiningSVG from "@/components/SVG/ShiningSVG";
 import NetworkerSVG from "@/components/SVG/NetworkerSVG";
 import GetStartedSVG from "@/components/SVG/GetStartedSVG";
-import { Check, ChevronRight } from "lucide-react";
+import { Check, ChevronRight, Ellipsis } from "lucide-react";
 import PromotionSVG from "@/components/SVG/PromotionSVG";
 import ProductSVG from "@/components/SVG/ProductSVG";
 import ProfileImg from "../../../public/images/ProfileImg1.png";
@@ -20,6 +20,7 @@ import Premium_tagSVG from "@/components/SVG/Premium_tagSVG";
 import EventImg from "../../../public/images/EventImg.png";
 import LikeSVG from "@/components/SVG/LikeSVG";
 import ShareSVG from "@/components/SVG/ShareSVG";
+import commentImg from "../../../public/images/commentimg1.jpg";
 const Page = () => {
   return (
     <section className="w-screen min-h-screen py-24">
@@ -159,7 +160,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="my-5.5">
+          <div className="my-5.5 sticky top-20">
             <p className="font-semibold text-lg mb-3">My Groups</p>
             <ul className="space-y-3 pl-3">
               <div className="flex items-center gap-4.5">
@@ -487,18 +488,119 @@ const Page = () => {
             </div>
 
             {/* Comment count */}
-            <div className="text-[#6c33d8] font-semibold text-sm space-x-5 my-2">
+            <div className="text-[#6c33d8] font-semibold text-sm space-x-5 my-3">
               <a href="#">1 Comment</a>
               <a href="#">4 Likes</a>
             </div>
 
-            <div>
-              <button>
+            {/* Like and Share */}
+            <div className="flex justify-between border-t border-b border-[#e2e8f0] py-1.5 pt-2">
+              <button className="flex items-center justify-center cursor-pointer font-semibold gap-2 w-full py-2.5 rounded-full hover:bg-[#f3f5f8] text-sm text-[#87888a] transition-colors">
                 <LikeSVG /> Like
               </button>
-              <button>
+              <button className="flex items-center justify-center cursor-pointer font-semibold gap-2 w-full py-2.5 rounded-full hover:bg-[#f3f5f8] text-sm text-[#87888a] transition-colors">
                 <ShareSVG /> Share
               </button>
+            </div>
+
+            <div className="mt-3.5 pl-px space-y-2">
+              {/* normal comment */}
+              <div className="flex gap-4">
+                <a
+                  href="#"
+                  className="size-10 rounded-full bg-[#e9f6e3] text-[#81b544] border border-[#efeadf] flex items-center justify-center text-xl cursor-pointer shrink-0 outline outline-[#d3d5d8] outline-offset-1"
+                >
+                  CM
+                </a>
+
+                <div>
+                  <div className="max-w-full bg-[#f3f5f8] p-3 rounded-xl">
+                    <p className="text-sm space-x-2.5 mb-1.5">
+                      <a href="#" className="font-bold text-[#1f2937]">
+                        Adedoyin Sam Adeeko
+                      </a>
+                      <span className="text-[#616b79]">Nov 6 • 12:35am</span>
+                    </p>
+
+                    <p className="text-[#1f2937] font-semibold">
+                      i will join the strong connection of entrepreneur.
+                    </p>
+                  </div>
+                  <div className="text-[#616b79] flex items-center font-semibold gap-4 mt-2">
+                    <button className="hover:underline underline-offset-4 cursor-pointer">
+                      Like
+                    </button>
+                    <button className="hover:underline underline-offset-4 cursor-pointer">
+                      Connect
+                    </button>
+                    <label htmlFor="report-open" className="relative">
+                      <Ellipsis className="cursor-pointer" />
+                      <input
+                        type="checkbox"
+                        className="peer sr-only"
+                        id="report-open"
+                        name="report-open"
+                      />
+                      <div className="border p-1 border-[#e2e8f0] min-w-32 rounded-md text-[#1f2937] absolute bg-white hidden peer-checked:block">
+                        <button className="hover:underline p-1 pl-1.5 hover:bg-[#f3f5f8] w-full rounded-sm transition-colors text-left cursor-pointer">
+                          Report
+                        </button>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              {/* comment with a link */}
+              <div className="flex gap-4">
+                <a
+                  href="#"
+                  className="size-11 rounded-full bg-[#e9f6e3] text-[#81b544] border border-[#efeadf] flex items-center justify-center text-xl cursor-pointer shrink-0 outline-[#d3d5d8] overflow-hidden"
+                >
+                  <Image src={commentImg} alt="comment image" />
+                </a>
+
+                <div>
+                  <div className="max-w-full bg-[#f3f5f8] p-3 rounded-xl">
+                    <p className="text-sm space-x-2.5 mb-1.5">
+                      <a href="#" className="font-bold text-[#1f2937]">
+                        Adedoyin Sam Adeeko
+                      </a>
+                      <span className="text-[#616b79]">Nov 6 • 12:35am</span>
+                    </p>
+
+                    <p className="text-[#1f2937] font-semibold">
+                      Obsession is what lazy people call dedication!{" "}
+                      <a href="#" className="text-[#055a8c] hover:underline">
+                        Today at 5:30 PM ET Smart Connect for Obsessed Business
+                        Leaders
+                      </a>
+                    </p>
+                  </div>
+                  <div className="text-[#616b79] flex items-center font-semibold gap-4 mt-2">
+                    <button className="hover:underline underline-offset-4 cursor-pointer">
+                      Like
+                    </button>
+                    <button className="hover:underline underline-offset-4 cursor-pointer">
+                      Connect
+                    </button>
+                    <label htmlFor="report-open1" className="relative">
+                      <Ellipsis className="cursor-pointer" />
+                      <input
+                        type="checkbox"
+                        className="peer sr-only"
+                        id="report-open1"
+                        name="report-open1"
+                      />
+                      <div className="border p-1 border-[#e2e8f0] min-w-32 rounded-md text-[#1f2937] absolute bg-white hidden peer-checked:block">
+                        <button className="hover:underline p-1 pl-1.5 hover:bg-[#f3f5f8] w-full rounded-sm transition-colors text-left cursor-pointer">
+                          Report
+                        </button>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

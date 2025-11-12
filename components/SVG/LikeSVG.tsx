@@ -3,6 +3,9 @@ const LikeSVG = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
+      width={19}
+      height={19}
+      fill="#87888a"
       role="img"
       aria-hidden="true"
     >
