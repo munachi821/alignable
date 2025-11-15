@@ -93,7 +93,8 @@ const page = () => {
           </div>
         </div>
 
-        <p className="font-bold text-[#616b79]">No results found.</p>
+        {/* Only show when no group search results are found */}
+        <p className="font-bold text-[#616b79] hidden">No results found.</p>
 
         <div className="flex justify-end my-5">
           <a
