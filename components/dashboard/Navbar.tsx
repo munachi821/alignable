@@ -126,10 +126,13 @@ const Navbar = () => {
               <GroupSVG />
               <li className="text-xs font-semibold">Groups</li>
             </Link>
-            <div className="flex items-center justify-center flex-col px-5 h-16 gap-1 cursor-pointer">
+            <Link
+              href="/biz/messages"
+              className="flex items-center justify-center flex-col px-5 h-16 gap-1 cursor-pointer"
+            >
               <MessagesSVG />
               <li className="text-xs font-semibold">Messages</li>
-            </div>
+            </Link>
             <div className="flex items-center justify-center flex-col px-5 h-16 gap-1 cursor-pointer">
               <NotificationSVG />
               <li className="text-xs font-semibold">Notifications</li>
