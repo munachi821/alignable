@@ -112,10 +112,13 @@ const Navbar = () => {
               <NetworkSVG />
               <li className="text-xs font-semibold">My Network</li>
             </Link>
-            <div className="flex items-center justify-center flex-col px-5 h-16 gap-1 cursor-pointer">
+            <Link
+              href="/biz/events"
+              className="flex items-center justify-center flex-col px-5 h-16 gap-1 cursor-pointer"
+            >
               <EventsSVG />
               <li className="text-xs font-semibold">Events</li>
-            </div>
+            </Link>
             <div className="flex items-center justify-center flex-col px-5 h-16 gap-1 cursor-pointer">
               <GroupSVG />
               <li className="text-xs font-semibold">Groups</li>

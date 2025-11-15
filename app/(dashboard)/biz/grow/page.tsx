@@ -5,7 +5,7 @@ import LocksSVG from "@/components/SVG/LocksSVG";
 import suggestedConnectionsImg1 from "../../../../public/images/suggestedConnectionsImg1.jpg";
 import Connections from "@/components/dashboard/Connections";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";

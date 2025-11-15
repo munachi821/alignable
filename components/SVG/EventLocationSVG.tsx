@@ -1,0 +1,15 @@
+const EventLocationSVG = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      role="img"
+      height="1em"
+      fill="currentColor"
+      className="h-4 w-4 shrink-0"
+    >
+      <path d="M12 2.161c-4.2 0-8 3.22-8 8.2 0 3.18 2.45 6.92 7.34 11.23.38.33.95.33 1.33 0 4.88-4.31 7.33-8.05 7.33-11.23 0-4.98-3.8-8.2-8-8.2Zm0 10c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2Z"></path>
+    </svg>
+  );
+};
+export default EventLocationSVG;
